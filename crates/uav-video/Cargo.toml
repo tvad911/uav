@@ -1,0 +1,15 @@
+[package]
+name = "uav-video"
+description = "Video streaming receiver and decoder for UAV FPV feed"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+tokio = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+bytes = { workspace = true }
+gstreamer = "0.25.1"
+gstreamer-app = "0.25.0"
+gstreamer-video = "0.25.0"

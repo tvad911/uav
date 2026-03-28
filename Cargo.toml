@@ -1,0 +1,49 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/uav-protocol",
+    "crates/uav-core",
+    "crates/uav-video",
+    "crates/uav-gcs",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Anh Duong"]
+
+[workspace.dependencies]
+# Shared dependencies across crates
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+thiserror = "2"
+anyhow = "1"
+chrono = { version = "0.4", features = ["serde"] }
+bytes = "1"
+
+# MAVLink
+mavlink = { version = "0.14", features = ["ardupilotmega", "tokio-1"] }
+
+# Serial / Network
+serialport = "4"
+
+# GUI
+eframe = "0.33"
+egui = "0.33"
+egui_extras = { version = "0.33", features = ["image"] }
+
+# Gamepad
+gilrs = "0.11"
+
+# Config
+toml = "0.8"
+dirs = "6"
+
+# Internal crates
+uav-protocol = { path = "crates/uav-protocol" }
+uav-core = { path = "crates/uav-core" }
+uav-video = { path = "crates/uav-video" }

@@ -1,0 +1,21 @@
+[package]
+name = "uav-core"
+description = "Core UAV communication, telemetry, and mission management"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+uav-protocol = { workspace = true }
+mavlink = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+serialport = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+chrono = { workspace = true }
+bytes = { workspace = true }
+gilrs = { workspace = true }
+toml = { workspace = true }
+dirs = { workspace = true }

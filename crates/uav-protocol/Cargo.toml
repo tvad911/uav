@@ -1,0 +1,14 @@
+[package]
+name = "uav-protocol"
+description = "MAVLink protocol definitions and message types for UAV GCS"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+mavlink = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+chrono = { workspace = true }
+bytes = { workspace = true }
+tracing = { workspace = true }
